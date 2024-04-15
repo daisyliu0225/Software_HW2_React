@@ -13,7 +13,7 @@ const Login = () => {
                         <div className="txt-bubble">
                             <div className="limit">
                                 <div className="typewriter">
-                                    <h1 className="title">Connect together. 🥰</h1>
+                                    <h1 className="title">Connect together.🥰</h1>
                                 </div>
                             </div>
                         </div>
@@ -42,7 +42,7 @@ const Login = () => {
                     </div>
                     <br/>
                     <button className="btn-pri" id="btnLogin">Sign in</button>
-                    <button className="btn-inf" id="btnGoogle" onclick={googleSignIn}>Sign in with Google</button>
+                    <button className="btn-inf" id="btnGoogle">Sign in with Google</button>
                     <button className="btn-second" id="btnSignUp">New account</button>
                     <p className="">by Daisy Liu</p>
                 </div>

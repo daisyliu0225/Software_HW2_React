@@ -1,8 +1,10 @@
 import React from "react";
 import loginPage from "../pics/login_page.png";
 import chatBubble from "../pics/chatBubble.png";
+import { signInWithGoogle } from "../firebaseSettings";
 
 const Login = () => {
+
     return (
         <main className="Login">
             <div id="custom-alert">
@@ -42,7 +44,7 @@ const Login = () => {
                     </div>
                     <br/>
                     <button className="btn-pri" id="btnLogin">Sign in</button>
-                    <button className="btn-inf" id="btnGoogle">Sign in with Google</button>
+                    <button className="btn-inf" id="btnGoogle" onClick={signInWithGoogle}>Sign in with Google</button>
                     <button className="btn-second" id="btnSignUp">New account</button>
                     <p className="">by Daisy Liu</p>
                 </div>

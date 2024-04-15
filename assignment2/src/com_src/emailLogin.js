@@ -1,5 +1,6 @@
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import { signInWithEmailAndPassword } from "firebase/auth";
+import { signOut } from "firebase/auth";
 
 function create_alert(type, message) {
     var str_html;
@@ -45,5 +46,14 @@ export const signInEmail = () => {
     })
     .catch((error) => {
         create_alert("error", error.message);
+    })
+}
+
+export const logOut = () => {
+    console.log("logout pressed");
+    const auth = getAuth();
+    signOut(auth)
+    .then(function(){
+        alert("bye");
     })
 }

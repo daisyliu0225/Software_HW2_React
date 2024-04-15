@@ -2,6 +2,7 @@ import React from "react";
 import loginPage from "../pics/login_page.png";
 import chatBubble from "../pics/chatBubble.png";
 import { signInWithGoogle } from "../firebaseSettings";
+import { signInEmail, signUpEmail } from "../com_src/emailLogin"; 
 
 const Login = () => {
 
@@ -43,9 +44,9 @@ const Login = () => {
                         </label>
                     </div>
                     <br/>
-                    <button className="btn-pri" id="btnLogin">Sign in</button>
+                    <button className="btn-pri" id="btnLogin" onClick={signInEmail}>Sign in</button>
                     <button className="btn-inf" id="btnGoogle" onClick={signInWithGoogle}>Sign in with Google</button>
-                    <button className="btn-second" id="btnSignUp">New account</button>
+                    <button className="btn-second" id="btnSignUp" onClick={signUpEmail}>New account</button>
                     <p className="">by Daisy Liu</p>
                 </div>
             </div>

@@ -2,7 +2,7 @@ import './App.css';
 import Login from "./components/login";
 import { auth } from "./firebaseSettings";
 import { useAuthState } from "react-firebase-hooks/auth";
-import Chat from './components/chat';
+import NavBar from './components/navBar';
 
 function App() {
   const [user] = useAuthState(auth);
@@ -12,7 +12,7 @@ function App() {
         <Login />
       ) : (
         <>
-        <Chat />
+        <NavBar />
         </>
       )}
     </div>

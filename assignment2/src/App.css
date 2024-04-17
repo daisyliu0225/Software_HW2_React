@@ -142,35 +142,75 @@ body {
       }
 
       .leftPanel {
+        display: flex;
         background-color: #FFFFFF;
         justify-content: space-between;
         color: #242443;
         height: 100%;
         position: fixed;
         left: 0;
-        top: 60px;
-        width: 300px;
+        top: 7.25%;
+        width: 20%;
         z-index: 1;
       }
 
       .leftChat {
-        font-size: 30px;
+        font-size: 40px;
         background-color: #CEE4FE;
-        width: 300px;
+        width: 20%;
         left: 0;
-        top: 41px;
-        height: 50px;
+        top: 4.5%;
+        height: 7%;
         position: fixed;
       }
 
       .addChat {
         position: fixed;
-        left: 245px;
-        top: 61px;
-        width: 50px;
-        height: 50px;
+        left: 15%;
+        top: 7%;
+        width: 5%;
+        height: 7%;
         border-radius: 5px;
+        font-size: 20px;
         align-items: center;
+      }
+
+      /*send-message*/
+      .send-message {
+        position: fixed;
+        bottom: 0px;
+        left: 0px;
+        width: 99%;
+        padding: 10px 10px;
+        background-color: #4c768d;
+        display: flex;
+      }
+      .send-message > input {
+        height: 40px;
+        padding: 10px 10px;
+        border-radius: 5px 0 0 5px;
+        border: none;
+        flex-grow: 1;
+        background-color: white;
+        color: #1c2c4c;
+        font-size: 1rem;
+      }
+      .send-message > input:placeholder {
+        color: #ddd;
+      }
+      .send-message > :is(input, button):focus {
+        outline: none;
+        border-bottom: 1px solid #7cc5d9;
+      }
+      .send-message > button {
+        width: 70px;
+        height: 40px;
+        padding: 5px 10px;
+        border-radius: 0 5px 5px 0;
+        color: #242443;
+        border: 1px solid #7cc5d9;
+        background-color: #7cc5d9;
+        font-weight: 600;
       }
 }
 
@@ -294,5 +334,76 @@ body {
         font-size: 20px;
         background-color: #CEE4FE;
         color: #000000;
+      }
+
+      .leftPanel {
+        background-color: #FFFFFF;
+        justify-content: space-between;
+        color: #242443;
+        height: 90%;
+        position: fixed;
+        left: 0;
+        top: 7%;
+        width: 20%;
+        z-index: 1;
+      }
+
+      .leftChat {
+        font-size: 40px;
+        background-color: #CEE4FE;
+        width: 20%;
+        left: 0;
+        top: 4.25%;
+        height: 7%;
+        position: fixed;
+      }
+
+      .addChat {
+        position: fixed;
+        left: 15%;
+        top: 7%;
+        width: 5%;
+        height: 7%;
+        border-radius: 5px;
+        font-size: 20px;
+        align-items: center;
+      }
+
+      /*send-message*/
+      .send-message {
+        position: fixed;
+        bottom: 0px;
+        left: 0px;
+        width: 99%;
+        padding: 10px 10px;
+        background-color: #4c768d;
+        display: flex;
+      }
+      .send-message > input {
+        height: 40px;
+        padding: 10px 10px;
+        border-radius: 5px 0 0 5px;
+        border: none;
+        flex-grow: 1;
+        background-color: white;
+        color: #1c2c4c;
+        font-size: 1rem;
+      }
+      .send-message > input:placeholder {
+        color: #ddd;
+      }
+      .send-message > :is(input, button):focus {
+        outline: none;
+        border-bottom: 1px solid #7cc5d9;
+      }
+      .send-message > button {
+        width: 70px;
+        height: 40px;
+        padding: 5px 10px;
+        border-radius: 0 5px 5px 0;
+        color: #242443;
+        border: 1px solid #7cc5d9;
+        background-color: #7cc5d9;
+        font-weight: 600;
       }
 }

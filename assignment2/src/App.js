@@ -3,6 +3,7 @@ import Login from "./components/login";
 import { auth } from "./firebaseSettings";
 import { useAuthState } from "react-firebase-hooks/auth";
 import NavBar from './components/navBar';
+import LeftPanel from './components/leftPanel';
 
 function App() {
   const [user] = useAuthState(auth);
@@ -13,6 +14,7 @@ function App() {
       ) : (
         <>
         <NavBar />
+        <LeftPanel/>
         </>
       )}
     </div>

@@ -129,6 +129,7 @@ body {
         top: 0;
         width: 100%;
         z-index: 1;
+        font-size: 30px;
       }
 
       .sign-out {
@@ -138,6 +139,38 @@ body {
         font-size: 20px;
         background-color: #CEE4FE;
         color: #000000;
+      }
+
+      .leftPanel {
+        background-color: #FFFFFF;
+        justify-content: space-between;
+        color: #242443;
+        height: 100%;
+        position: fixed;
+        left: 0;
+        top: 60px;
+        width: 300px;
+        z-index: 1;
+      }
+
+      .leftChat {
+        font-size: 30px;
+        background-color: #CEE4FE;
+        width: 300px;
+        left: 0;
+        top: 41px;
+        height: 50px;
+        position: fixed;
+      }
+
+      .addChat {
+        position: fixed;
+        left: 245px;
+        top: 61px;
+        width: 50px;
+        height: 50px;
+        border-radius: 5px;
+        align-items: center;
       }
 }
 

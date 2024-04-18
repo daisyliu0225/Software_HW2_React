@@ -27,7 +27,9 @@
 
 ### How to setup your project
 
--  Describe STEP by STEP (i.e. `cd Midterm`, `npm install` ...)
+-  cd assignment 2
+-  npm init
+-  npm install --save firebase
 
 ### How to use 
 

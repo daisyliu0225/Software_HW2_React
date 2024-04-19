@@ -11,7 +11,7 @@ body {
       width: 100%;
       min-height: 100vh;
       background-color: #B2A4D4;
-      color: #4c768d;
+      color: #000000;
       padding-top: 60px;
     }
     
@@ -127,6 +127,15 @@ body {
 }
 
 @media(max-width: 1350px){
+
+    .App {
+        width: 100%;
+        min-height: 100vh;
+        background-color: #B2A4D4;
+        color: #000000;
+        padding-top: 60px;
+    }
+    
     .page {
         margin: auto;
         padding: 150px;

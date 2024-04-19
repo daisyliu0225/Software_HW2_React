@@ -1,6 +1,6 @@
  /*chat component */
   .messages-wrapper {
-    margin-left: auto;
+    margin-left: 20%;
     margin-right: 0px;
     margin-bottom: 60px;
     padding: 30px;
@@ -73,7 +73,7 @@
   .send-message {
     position: fixed;
     bottom: 0px;
-    left: 0px;
+    margin-left: 20%;
     width: 99%;
     padding: 10px 10px;
     background-color: #9571c5;

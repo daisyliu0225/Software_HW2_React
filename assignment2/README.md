@@ -30,6 +30,7 @@
 -  cd assignment 2
 -  npm init
 -  npm install --save firebase
+-  npx update-browserslist-db@latest
 
 ### How to use 
 

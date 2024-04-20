@@ -1,4 +1,5 @@
 @media(min-width: 1350px){
+    /*Chatrooms*/
     .chat-rooms {
         background-color: #FFFFFF;
         margin-left: 0px;
@@ -39,6 +40,35 @@
         margin-left: 0px;
         width: 20%;
         height: 100%;
+    }
+
+    /*user pics*/
+    .user-panel {
+        border-radius: 0px;
+        margin-left: 2.5%;
+        margin-right: auto;
+        margin-top: 5px;
+        width: 95%;
+        height: 60px;
+        background-color: plum;
+    }
+
+    .avatar {
+        margin-left: 0px;
+        margin-top: 0px;
+        display: flex;
+    }
+
+    .avatar-pic {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .name {
+        margin-top: auto;
+        margin-left: 40px;
+        margin-bottom: auto;
+        font-size: 30px;
     }
 }
 
@@ -82,5 +112,33 @@
         margin-left: 0px;
         width: 20%;
         height: 100%;
+    }
+
+    /*user pics*/
+    .user-panel {
+        border-radius: 0px;
+        margin-left: 2.5%;
+        margin-right: auto;
+        margin-top: 5px;
+        width: 95%;
+        height: 60px;
+        background-color: plum;
+    }
+
+    .avatar {
+        display: flex;
+    }
+
+    .avatar-pic {
+        display: none;
+    }
+    
+    .name {
+        text-align: center;
+        margin-top: 10px;
+        margin-bottom: auto;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 30px;
     }
 }

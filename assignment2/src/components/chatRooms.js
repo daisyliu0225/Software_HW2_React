@@ -1,4 +1,5 @@
 import React, {useRef} from "react";
+import Users from "./users"
 
 const ChatRooms = () => {
     const scroll = useRef();
@@ -9,7 +10,7 @@ const ChatRooms = () => {
                     <button className="addchat" type="button">Add</button>
                 </h1>
             </div>
-            <div className="chat-wrapper"></div>
+            <div className="chat-wrapper"><Users/></div>
             <span ref={scroll}></span>
         </main>
     )

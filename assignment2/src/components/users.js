@@ -1,13 +1,13 @@
-import React, {useRef} from "react";
-import girl2 from "../pics/avatar/girl2.png";
+import React from "react";
+import chat from "../pics/avatar/chat.png"
 
-const Users = () => {
-    const scroll = useRef();
+
+const Users = ({ roomName}) => {
     return (
         <main className="user-panel">
             <div className="avatar">
-                <img src={girl2} className="avatar-pic"></img>
-                <h1 className="name">Name</h1>
+                <img src={chat} className="avatar-pic"></img>
+                <h1 className="name">{roomName}</h1>
             </div>
         </main>
     )

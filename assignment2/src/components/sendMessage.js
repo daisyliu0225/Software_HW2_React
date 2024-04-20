@@ -3,7 +3,7 @@ import {auth, db} from "../firebaseSettings";
 import {addDoc, collection, serverTimestamp} from "firebase/firestore";
 
 const SendMessage = ({ scroll }) => {
-    const [message, setMessage] = useState("");
+    const [message, setMessage] = useState([]);
     console.log("message sent");
     
     const sendMessage = async (event) => {
@@ -23,6 +23,7 @@ const SendMessage = ({ scroll }) => {
         setMessage("");
         scroll.current.scrollIntoView({ behavior: "smooth" });
     };
+
     return (
         <form onSubmit={(event) => sendMessage(event)} className="send-message">
         <label htmlFor="messageInput" hidden>

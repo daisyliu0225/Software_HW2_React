@@ -1,6 +1,7 @@
 import './css/App.css';
 import './css/chatBox.css'
 import './css/chatRooms.css'
+import './css/addUser.css'
 import Login from "./components/login";
 import { auth } from "./firebaseSettings";
 import { useAuthState } from "react-firebase-hooks/auth";

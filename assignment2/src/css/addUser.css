@@ -1,0 +1,28 @@
+.message-nav {
+    margin-top: 0px;
+    margin-left: 20%;
+    margin-right: 0px;
+    background-color: #FFFFFF;
+    position: fixed;
+    height: 30px;
+    width: 79%;
+}
+
+.add-btn {
+    align-items: center;
+    float: right;
+    background-color: white;
+    height: 30px;
+    width: 30px;
+}
+
+.add-title {
+    padding-left: 91%; 
+    font-size: 20px;
+}
+
+.add-user {
+    display: block;
+    margin: auto;
+    width: 99%;
+}

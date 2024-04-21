@@ -7,6 +7,7 @@ import NavBar from "./navBar";
 import SendMessage from "./sendMessage";
 import Message from "./message";
 import ChatRooms from "./chatRooms";
+import AddUser from "./addUser";
 import { db } from "../firebaseSettings";
 
 const ChatBox = () => {
@@ -38,6 +39,7 @@ const ChatBox = () => {
         <main className="chat-box">
             <NavBar/>
             <ChatRooms/>
+            <AddUser/>
             <div className="messages-wrapper">
                 {messages?.map((message) => (
                     <Message key={message.id} message={message} />

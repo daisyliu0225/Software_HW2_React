@@ -24,6 +24,7 @@ const ChatRooms = () => {
                 </h1>
             </div>
             <div className="chat-wrapper">
+                <Users roomName={"public"}/>
                 {roomname.map((name) => (
                     <Users key={name.id} roomName={name}/>
                 ))}

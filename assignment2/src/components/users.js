@@ -2,7 +2,7 @@ import React from "react";
 import chat from "../pics/avatar/chat.png"
 
 
-const Users = ({ roomName}) => {
+const Users = ({ roomName }) => {
     return (
         <main className="user-panel">
             <div className="avatar">

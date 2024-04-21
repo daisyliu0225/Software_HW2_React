@@ -1,32 +1,44 @@
 import React, { useState, useRef, useEffect } from "react";
-import Users from "./users"
+import Users from "./users";
+import {auth, db} from "../firebaseSettings";
+import {addDoc, collection, serverTimestamp} from "firebase/firestore";
+import {
+    query, orderBy, onSnapshot, limit,
+} from "firebase/firestore";
+import AddChat from "./addChat";
+
 
 const ChatRooms = () => {
     const [roomname, setName] = useState([]);
     const scroll = useRef();
 
-    const writeName = () => {
-        console.log("create chat.");
-        let name = prompt("Enter chatroom name.");
-        if(name == null || name == ""){
-            alert("cancel create");
-        }else{
-            setName([...roomname, name]);
-            alert("create " + name + " finished");
-        }
-    }
-    
+    useEffect(() => {
+        const rooms = query(
+            collection(db, "chatRooms"),
+            orderBy("createdAt", "desc"),
+            limit(50)
+        );
+
+        const unsubscribe = onSnapshot(rooms, (QuerySnapshot) => {
+            const fetchedRooms = [];
+            QuerySnapshot.forEach((doc) => {
+                fetchedRooms.push({ ...doc.data(), id: doc.id});  
+            });
+            const sortedRooms = fetchedRooms.sort(
+                (a, b) => a.createdAt - b.createdAt
+            );
+            setName(sortedRooms);
+        });
+        return () => unsubscribe;
+    }, []);
+
     return (
         <main className="chat-rooms">
-            <div className="chat-title">
-                <h1 className="chats">Chats
-                    <button className="addchat" type="button" onClick={writeName}>Add</button>
-                </h1>
-            </div>
+            <AddChat/>
             <div className="chat-wrapper">
                 <Users roomName={"public"}/>
                 {roomname.map((name) => (
-                    <Users key={name.id} roomName={name}/>
+                    <Users key={name.id} roomName={name.text}/>
                 ))}
             </div>
             <span ref={scroll}></span>

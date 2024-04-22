@@ -16,6 +16,7 @@
     width: 30px;
 }
 
+
 @media(min-width: 1350px){
     .add-title {
         padding-left: 89%; 

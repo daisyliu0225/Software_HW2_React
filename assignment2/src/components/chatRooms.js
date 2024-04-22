@@ -9,6 +9,7 @@ import {
 import AddChat from "./addChat";
 
 
+
 const ChatRooms = () => {
     const [roomname, setName] = useState([]);
     const [user] = useAuthState(auth);
@@ -44,7 +45,7 @@ const ChatRooms = () => {
                 <Users roomName={"public"}/>
                 {roomname
                     .map((name) => (
-                    <Users key={name.id} roomName={name.text}/>
+                        <Users key={name.id} roomName={name.text} time={name.createdAt}/>
                 ))}
             </div>
             <span ref={scroll}></span>

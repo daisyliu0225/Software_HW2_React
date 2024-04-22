@@ -16,13 +16,27 @@
     width: 30px;
 }
 
-.add-title {
-    padding-left: 89%; 
-    font-size: 20px;
+@media(min-width: 1350px){
+    .add-title {
+        padding-left: 89%; 
+        font-size: 20px;
+    }
+    
+    .add-user {
+        display: block;
+        margin: auto;
+        width: 99%;
+    }
 }
 
-.add-user {
-    display: block;
-    margin: auto;
-    width: 99%;
+@media(max-width: 1350px){
+    .add-title {
+        display: none;
+    }
+    
+    .add-user {
+        display: block;
+        margin: auto;
+        width: 99%;
+    }
 }

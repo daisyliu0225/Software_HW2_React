@@ -1,7 +1,8 @@
 import React, { useState, useRef, useEffect } from "react";
 import Users from "./users";
 import {auth, db} from "../firebaseSettings";
-import {addDoc, collection, serverTimestamp} from "firebase/firestore";
+import {addDoc, collection, serverTimestamp, where} from "firebase/firestore";
+import { useAuthState } from "react-firebase-hooks/auth";
 import {
     query, orderBy, onSnapshot, limit,
 } from "firebase/firestore";
@@ -10,11 +11,13 @@ import AddChat from "./addChat";
 
 const ChatRooms = () => {
     const [roomname, setName] = useState([]);
+    const [user] = useAuthState(auth);
     const scroll = useRef();
 
     useEffect(() => {
         const rooms = query(
             collection(db, "chatRooms"),
+            where("uid", "==", user.uid),
             orderBy("createdAt", "desc"),
             limit(50)
         );
@@ -29,6 +32,8 @@ const ChatRooms = () => {
             );
             setName(sortedRooms);
         });
+
+        
         return () => unsubscribe;
     }, []);
 
@@ -37,7 +42,8 @@ const ChatRooms = () => {
             <AddChat/>
             <div className="chat-wrapper">
                 <Users roomName={"public"}/>
-                {roomname.map((name) => (
+                {roomname
+                    .map((name) => (
                     <Users key={name.id} roomName={name.text}/>
                 ))}
             </div>

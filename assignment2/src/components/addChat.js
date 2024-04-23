@@ -6,7 +6,7 @@ const AddChat = () => {
     const writeName = async(event) => {
         console.log("create chat.");
         let name = prompt("Enter chatroom name.");
-        if(name == null || name == ""){
+        if(name === null || name === ""){
             alert("cancel create");
         }else{
             const {uid} = auth.currentUser;

@@ -32,7 +32,7 @@
 -  npm install
 -  npm install -g firebase-tools
 -  npm install firebase@latest
--  npm install util
+-  npm install react-firebase-hooks
 
 ### How to use 
 

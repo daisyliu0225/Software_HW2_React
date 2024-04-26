@@ -5,7 +5,6 @@ import {addDoc, collection, serverTimestamp} from "firebase/firestore";
 const SendMessage = ({ scroll }) => {
     const [message, setMessage] = useState([]);
     console.log("message sent");
-    
     const sendMessage = async (event) => {
         event.preventDefault();
         if (message.trim() === "") {
@@ -14,11 +13,11 @@ const SendMessage = ({ scroll }) => {
         }
         const { uid, displayName, photoURL } = auth.currentUser;
         await addDoc(collection(db, "messages"), {
-        text: message,
-        name: displayName,
-        avatar: photoURL,
-        createdAt: serverTimestamp(),
-        uid,
+            text: message,
+            name: displayName,
+            avatar: photoURL,
+            createdAt: serverTimestamp(),
+            uid,
         });
         setMessage("");
         scroll.current.scrollIntoView({ behavior: "smooth" });
@@ -38,7 +37,7 @@ const SendMessage = ({ scroll }) => {
             value={message}
             onChange={(e) => setMessage(e.target.value)}
         />
-        <button type="submit">Send</button>
+        <button type="submit" className="submitButton">Send</button>
         </form>
     );
 };

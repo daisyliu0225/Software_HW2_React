@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import {auth, db} from "../firebaseSettings";
-import {addDoc, collection, serverTimestamp} from "firebase/firestore";
+import {doc, addDoc, collection, serverTimestamp,  updateDoc} from "firebase/firestore";
 
 const AddChat = () => {    
     const writeName = async(event) => {
@@ -14,8 +14,15 @@ const AddChat = () => {
                 text: name,
                 createdAt: serverTimestamp(),
                 uid,
-            });
-            alert("create " + name + " finished");
+            })
+            .then(docRef => {
+                console.log(docRef.id); 
+                updateDoc(doc(db, "chatRooms", docRef.id), {chatRoomID: docRef.id});
+                alert("create " + name + " finished");
+            })
+            .catch(error => {
+                console.log(error);
+            })
         }
     };
 

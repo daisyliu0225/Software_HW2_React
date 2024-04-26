@@ -1,9 +1,14 @@
 import React from "react";
 import chat from "../pics/avatar/chat.png"
-import { changeRoom } from "../com_src/chatRoomsrc";
 
+export var roomID = "ZLsINfCEtpgqJds0qjnq";
 
 const Users = ({ roomName }) => {
+    const changeRoom = () => {
+        roomID = roomName.chatRoomID;
+        console.log(roomID);
+    }
+
     return (
         <main className="user-panel">
             <button className="avatar" onClick={() => changeRoom(roomName.chatRoomID)}>

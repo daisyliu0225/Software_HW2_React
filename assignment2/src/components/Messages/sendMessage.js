@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import {auth, db} from "../../firebaseSettings";
 import {addDoc, collection, serverTimestamp} from "firebase/firestore";
+import { roomID } from "../users";
 
 const SendMessage = ({ scroll }) => {
     const [message, setMessage] = useState([]);
     console.log("message sent");
+    console.log(roomID);
     const sendMessage = async (event) => {
         event.preventDefault();
         if (message.trim() === "") {
@@ -17,6 +19,7 @@ const SendMessage = ({ scroll }) => {
             name: displayName,
             avatar: photoURL,
             createdAt: serverTimestamp(),
+            parent: roomID,
             uid,
         });
         setMessage("");

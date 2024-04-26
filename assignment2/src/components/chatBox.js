@@ -1,30 +1,30 @@
 import React, {useEffect, useRef, useState }from "react";
-import {
-    query, collection, orderBy, onSnapshot, limit,
-    QuerySnapshot
-} from "firebase/firestore";
+import { db } from "../firebaseSettings";
+import {query, collection, collectionGroup, QuerySnapshot, orderBy, limit, onSnapshot, where} from "firebase/firestore";
 import NavBar from "./navBar";
 import SendMessage from "./Messages/sendMessage";
 import Message from "./Messages/message";
 import ChatRooms from "./Chatrooms/chatRooms";
 import AddUser from "./addUser";
-import { db } from "../firebaseSettings";
+import { roomID } from "./users";
 
 const ChatBox = () => {
     const [messages, setMessages] = useState([]);
     const scroll = useRef();
 
     useEffect(() => {
+        console.log(roomID);
         const q = query(
             collection(db, "messages"),
+            where("parent", "==", roomID), 
             orderBy("createdAt", "desc"),
             limit(50)
         );
 
         const unsubscribe = onSnapshot(q, (QuerySnapshot) => {
             const fetchedMessages = [];
-            QuerySnapshot.forEach((doc) => {
-                fetchedMessages.push({ ...doc.data(), id: doc.id});  
+            QuerySnapshot.forEach((docSnap) => {
+                fetchedMessages.push({ ...docSnap.data(), id: docSnap.id});  
             });
 
             const sortedMessages = fetchedMessages.sort(

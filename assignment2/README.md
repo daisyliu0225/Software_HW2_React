@@ -31,6 +31,7 @@
 -  npm init
 -  npm install --save firebase
 -  npx update-browserslist-db@latest
+-  npm install firebase-admin --save
 
 ### How to use 
 

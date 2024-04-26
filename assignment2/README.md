@@ -31,6 +31,7 @@
 -  npm init
 -  npm install
 -  npm install -g firebase-tools
+-  npm install firebase@latest
 
 ### How to use 
 

@@ -29,9 +29,8 @@
 
 -  cd assignment 2
 -  npm init
--  npm install --save firebase
--  npx update-browserslist-db@latest
--  npm install firebase-admin --save
+-  npm install
+-  npm install -g firebase-tools
 
 ### How to use 
 

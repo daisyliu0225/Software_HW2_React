@@ -32,6 +32,7 @@
 -  npm install
 -  npm install -g firebase-tools
 -  npm install firebase@latest
+-  npm install util
 
 ### How to use 
 

@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
-import Users from "./users";
-import {auth, db} from "../firebaseSettings";
+import Users from "../users";
+import {auth, db} from "../../firebaseSettings";
 import {addDoc, collection, serverTimestamp, where} from "firebase/firestore";
 import { useAuthState } from "react-firebase-hooks/auth";
 import {
@@ -18,7 +18,7 @@ const ChatRooms = () => {
     useEffect(() => {
         const rooms = query(
             collection(db, "chatRooms"),
-            where("uid", "==", user.uid),
+            where("creator", "==", user.email),
             orderBy("createdAt", "desc"),
             limit(50)
         );
@@ -42,10 +42,9 @@ const ChatRooms = () => {
         <main className="chat-rooms">
             <AddChat/>
             <div className="chat-wrapper">
-                <Users roomName={"public"}/>
                 {roomname
                     .map((name) => (
-                        <Users key={name.id} roomName={name.text} time={name.createdAt}/>
+                        <Users roomName={name}/>
                 ))}
             </div>
             <span ref={scroll}></span>

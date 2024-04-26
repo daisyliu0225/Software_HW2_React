@@ -3,12 +3,12 @@ import chat from "../pics/avatar/chat.png"
 import { changeRoom } from "../com_src/chatRoomsrc";
 
 
-const Users = ({ roomName, key, time}) => {
+const Users = ({ roomName }) => {
     return (
         <main className="user-panel">
-            <button className="avatar" onClick={() => changeRoom(time)}>
+            <button className="avatar" onClick={() => changeRoom(roomName.chatRoomID)}>
                 <img src={chat} className="avatar-pic"></img>
-                <h1 className="name">{roomName}</h1>
+                <h1 className="name">{roomName.text}</h1>
             </button>
         </main>
     )

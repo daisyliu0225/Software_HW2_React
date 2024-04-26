@@ -1,5 +1,5 @@
 import React from "react";
-import { auth } from "../firebaseSettings";
+import { auth } from "../../firebaseSettings";
 import { useAuthState } from "react-firebase-hooks/auth";
 
 const Message = ({ message }) => {

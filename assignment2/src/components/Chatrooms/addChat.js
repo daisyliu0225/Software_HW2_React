@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import {auth, db} from "../firebaseSettings";
+import {auth, db} from "../../firebaseSettings";
 import {doc, addDoc, collection, serverTimestamp,  updateDoc} from "firebase/firestore";
 
 const AddChat = () => {    
@@ -9,11 +9,11 @@ const AddChat = () => {
         if(name === null || name === ""){
             alert("cancel create");
         }else{
-            const {uid} = auth.currentUser;
+            const userEmail = auth.currentUser.email;
             await addDoc(collection(db, "chatRooms"), {
                 text: name,
                 createdAt: serverTimestamp(),
-                uid,
+                creator: userEmail,
             })
             .then(docRef => {
                 console.log(docRef.id); 

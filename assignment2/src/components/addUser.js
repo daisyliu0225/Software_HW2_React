@@ -1,7 +1,9 @@
 import React from "react";
 import addUser from "../pics/avatar/add_icon.png"
 import {auth} from "../firebaseSettings";
-import {  fetchSignInMethodsForEmail } from 'firebase/auth';
+import 'firebase/auth';
+import { fetchSignInMethodsForEmail, getAuth } from "firebase/auth";
+import {doc, addDoc, collection, serverTimestamp,  updateDoc} from "firebase/firestore";
 
 const AddUser = () => {
 
@@ -15,6 +17,7 @@ const AddUser = () => {
               if (signInMethods.length > 0) {
                 // User found, proceed with adding
                 console.log(signInMethods);
+                
                 alert(newUser + " added");
               } else {
                 // User does not exist

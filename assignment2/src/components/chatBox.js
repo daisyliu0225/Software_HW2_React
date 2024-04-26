@@ -4,9 +4,9 @@ import {
     QuerySnapshot
 } from "firebase/firestore";
 import NavBar from "./navBar";
-import SendMessage from "./sendMessage";
-import Message from "./message";
-import ChatRooms from "./chatRooms";
+import SendMessage from "./Messages/sendMessage";
+import Message from "./Messages/message";
+import ChatRooms from "./Chatrooms/chatRooms";
 import AddUser from "./addUser";
 import { db } from "../firebaseSettings";
 

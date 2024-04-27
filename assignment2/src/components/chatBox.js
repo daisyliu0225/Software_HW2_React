@@ -10,14 +10,14 @@ import Wrapper from "./wrapper";
 
 const ChatBox = () => {
     const scroll = useRef();
-
+    const [room, setRoom] = useState("");
     return (
         <main className="chat-box">
             <NavBar/>
             <AddUser/>
-            <ChatRooms/>
+            <ChatRooms clickroom={setRoom}/>
             <div className="messages-wrapper">
-                <Wrapper/>
+                <Wrapper clickroom={room}/>
             </div>
             <span ref={scroll}></span>
             <SendMessage scroll={scroll}/>

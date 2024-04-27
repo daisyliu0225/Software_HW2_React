@@ -3,20 +3,11 @@ import Message from "./Messages/message";
 import { db } from "../firebaseSettings";
 import {query, collection, collectionGroup, QuerySnapshot, orderBy, limit, onSnapshot, where} from "firebase/firestore";
 import { roomID } from "./users";
-import { click } from "./users";
 
-const Wrapper = () => {
+const Wrapper = ({clickroom}) => {
     const [messages, setMessages] = useState([]);
-    const [clicked, setclick] = useState("false");
     const scroll = useRef();
-
-    useEffect(() => {
-        if(click == true){
-            setclick("true");
-            click = false;
-        }
-    })
-
+    
     useEffect(() => {
         const q = query(
             collection(db, "messages"),
@@ -37,7 +28,7 @@ const Wrapper = () => {
             setMessages(sortedMessages);
         });
         return () => unsubscribe;
-    });
+    },[clickroom]);
 
     return(
         <main>

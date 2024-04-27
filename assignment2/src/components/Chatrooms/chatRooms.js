@@ -10,7 +10,7 @@ import AddChat from "./addChat";
 
 
 
-const ChatRooms = () => {
+const ChatRooms = ({clickroom}) => {
     const [roomname, setName] = useState([]);
     const [user] = useAuthState(auth);
     const scroll = useRef();
@@ -44,7 +44,7 @@ const ChatRooms = () => {
             <div className="chat-wrapper">
                 {roomname
                     .map((name) => (
-                        <Users roomName={name}/>
+                        <Users roomName={name} clickroom={clickroom}/>
                 ))}
             </div>
 

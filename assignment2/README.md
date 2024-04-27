@@ -48,10 +48,4 @@
 
 ### Others (Optional)
 
-- Anything you want to say to TAs.
-
-<style>
-table th{
-    width: 100%;
-}
-</style>
+- I thought that props was hard. It is actually easier than I thought. It is actually really comvenient.

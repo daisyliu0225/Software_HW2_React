@@ -8,12 +8,12 @@ import ChatRooms from "./Chatrooms/chatRooms";
 import AddUser from "./addUser";
 import { roomID } from "./users";
 
+
 const ChatBox = () => {
     const [messages, setMessages] = useState([]);
     const scroll = useRef();
 
     useEffect(() => {
-        console.log(roomID);
         const q = query(
             collection(db, "messages"),
             where("parent", "==", roomID), 
@@ -33,7 +33,7 @@ const ChatBox = () => {
             setMessages(sortedMessages);
         });
         return () => unsubscribe;
-    }, []);
+    });
 
     return (
         <main className="chat-box">

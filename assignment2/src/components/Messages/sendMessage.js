@@ -5,7 +5,6 @@ import { roomID } from "../users";
 
 const SendMessage = ({ scroll }) => {
     const [message, setMessage] = useState([]);
-    console.log("message sent");
     console.log(roomID);
     const sendMessage = async (event) => {
         event.preventDefault();

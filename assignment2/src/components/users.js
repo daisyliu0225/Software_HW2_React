@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import chat from "../pics/avatar/chat.png"
 
-export var roomID = "ZLsINfCEtpgqJds0qjnq";
+export var roomID = "";
+export var click = false;
 
 const Users = ({ roomName }) => {
-    const [rooms, setRooms] = useState([]);
     const changeRoom = (id) => {
+        console.log("change rooms");
         roomID = id;
-        setRooms([...rooms, roomID]);
+        click = true;
     }
 
     return (

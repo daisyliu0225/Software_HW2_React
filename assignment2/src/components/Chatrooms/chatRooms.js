@@ -47,6 +47,7 @@ const ChatRooms = () => {
                         <Users roomName={name}/>
                 ))}
             </div>
+
             <span ref={scroll}></span>
         </main>
     )

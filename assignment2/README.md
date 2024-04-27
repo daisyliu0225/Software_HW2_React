@@ -48,4 +48,4 @@
 
 ### Others (Optional)
 
-- I thought that props was hard. It is easier than I thought. It is surprisingly convenient.
+- I thought that props was hard. It is easier than I thought and surprisingly convenient.

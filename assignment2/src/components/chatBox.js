@@ -7,7 +7,6 @@ import AddUser from "./addUser";
 import Wrapper from "./wrapper";
 
 
-
 const ChatBox = () => {
     const scroll = useRef();
     const [room, setRoom] = useState("");

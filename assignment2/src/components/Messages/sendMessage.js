@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import {auth, db} from "../../firebaseSettings";
 import {addDoc, collection, serverTimestamp} from "firebase/firestore";
 import { roomID } from "../users";
+import NotificationComponent from "../notification.js";
 
 const SendMessage = ({ scroll }) => {
     const [message, setMessage] = useState([]);
@@ -9,8 +10,12 @@ const SendMessage = ({ scroll }) => {
     const sendMessage = async (event) => {
         event.preventDefault();
         if (message.trim() === "") {
-        alert("Enter valid message");
-        return;
+            alert("Enter valid message");
+            return;
+        }
+        if(roomID === ""){
+            alert("You cannot send messages here.");
+            return;
         }
         const { uid, displayName, photoURL } = auth.currentUser;
         await addDoc(collection(db, "messages"), {
@@ -39,7 +44,9 @@ const SendMessage = ({ scroll }) => {
             value={message}
             onChange={(e) => setMessage(e.target.value)}
         />
-        <button type="submit" className="submitButton">Send</button>
+        <NotificationComponent>
+            <button type="submit" className="submitButton"></button>
+        </NotificationComponent>
         </form>
     );
 };

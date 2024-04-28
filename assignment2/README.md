@@ -33,6 +33,7 @@
 -  npm install -g firebase-tools
 -  npm install firebase@latest
 -  npm install react-firebase-hooks
+-  npm i react-push-notification
 
 ### How to use 
 

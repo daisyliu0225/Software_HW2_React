@@ -1,6 +1,7 @@
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { signOut } from "firebase/auth";
+import { roomID } from "../components/users";
 
 function create_alert(type, message) {
     var str_html;
@@ -54,6 +55,7 @@ export const logOut = () => {
     const auth = getAuth();
     signOut(auth)
     .then(function(){
+        roomID = "";
         alert("bye");
     })
 }

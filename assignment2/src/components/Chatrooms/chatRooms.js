@@ -25,8 +25,8 @@ const ChatRooms = ({clickroom}) => {
 
         const unsubscribe = onSnapshot(rooms, (QuerySnapshot) => {
             const fetchedRooms = [];
-            QuerySnapshot.forEach((doc) => {
-                fetchedRooms.push({ ...doc.data(), id: doc.id});  
+            QuerySnapshot.forEach((docSnap) => {
+                fetchedRooms.push({ ...docSnap.data(), id: doc.id});  
             });
             const sortedRooms = fetchedRooms.sort(
                 (a, b) => a.createdAt - b.createdAt
@@ -38,14 +38,13 @@ const ChatRooms = ({clickroom}) => {
         return () => unsubscribe;
     }, []);
 
+
     return (
         <main className="chat-rooms">
             <AddChat/>
             <div className="chat-wrapper">
-                {roomname
-                    .map((name) => (
-                        <Users roomName={name} clickroom={clickroom}/>
-                ))}
+                {roomname.map((name) => (
+                        <Users roomName={name} clickroom={clickroom}/>))}
             </div>
 
             <span ref={scroll}></span>

@@ -3,8 +3,8 @@ import addUser from "../pics/avatar/add_icon.png"
 import {auth} from "../firebaseSettings";
 import 'firebase/auth';
 import { fetchSignInMethodsForEmail, getAuth } from "firebase/auth";
-import {doc, updateDoc, query, collection, orderBy, limit, onSnapshot, where, QuerySnapshot} from "firebase/firestore";
-import { roomID } from "./users";
+import { collection, addDoc, serverTimestamp} from "firebase/firestore";
+import { roomID, roomText } from "./users";
 import { db } from "../firebaseSettings";
 
 const AddUser = () => {
@@ -17,21 +17,15 @@ const AddUser = () => {
             fetchSignInMethodsForEmail(auth, newUser).then((signInMethods) => {
               if (signInMethods.length > 0) {
                 // User found, proceed with adding
-                const q = query(
-                  collection(db, "chatRooms"),
-                  where("chatRoomID", "==", roomID), 
-                  orderBy("createdAt", "desc"),
-                  limit(50)
-                );
-
-                const fetchedUsers = [];
-                onSnapshot(q, (QuerySnapshot) => {
-                  QuerySnapshot.forEach((docSnap) => {
-                      fetchedUsers.push({docSnap});  
-                  });
-                  fetchedUsers.push([...fetchedUsers, newUser]);
-                });
-                updateDoc(doc(db, "chatRooms", roomID), {users: fetchedUsers});
+                addDoc(collection(db, "roomUsers"), {
+                  text: roomText, 
+                  user: newUser,
+                  createdAt: serverTimestamp(),
+                  parent: roomID
+                })
+                .catch(error => {
+                  console.log(error);
+                })
 
                 console.log(signInMethods);
                 alert(newUser + " added");

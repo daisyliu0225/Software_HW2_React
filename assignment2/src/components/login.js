@@ -38,11 +38,6 @@ const Login = () => {
                             <td><input type="password" id="inputPassword" className="form-control" placeholder="Password" required/></td>
                         </tr>
                     </table>
-                    <div className="checkbox mb-3">
-                        <label>
-                        <input type="checkbox" value="remember-me"/> Remember me
-                        </label>
-                    </div>
                     <br/>
                     <button className="btn-pri" id="btnLogin" onClick={signInEmail}>Sign in</button>
                     <button className="btn-inf" id="btnGoogle" onClick={signInWithGoogle}>Sign in with Google</button>

@@ -36,7 +36,10 @@
 
 ### How to use 
 
-- Describe how to use your web and maybe insert images or gifs to help you explain.
+- Sign in
+- Send messages
+- Create chatrooms
+- Add user
 
 ### Function description
 

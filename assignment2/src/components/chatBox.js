@@ -1,10 +1,10 @@
 import React, {useEffect, useRef, useState }from "react";
 import NavBar from "./navBar";
 import SendMessage from "./Messages/sendMessage";
-import Message from "./Messages/message";
 import ChatRooms from "./Chatrooms/chatRooms";
 import AddUser from "./addUser";
 import Wrapper from "./wrapper";
+import Profile from "./profile";
 
 
 const ChatBox = () => {
@@ -15,6 +15,7 @@ const ChatBox = () => {
             <NavBar/>
             <AddUser/>
             <ChatRooms clickroom={setRoom}/>
+            <Profile/>
             <div className="messages-wrapper">
                 <Wrapper clickroom={room}/>
             </div>

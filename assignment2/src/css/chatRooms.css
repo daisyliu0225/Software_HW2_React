@@ -77,6 +77,78 @@
         margin-bottom: auto;
         font-size: 30px;
     }
+
+    /*Profile*/
+    .profile {
+        background-color: #9a7ec8;
+        margin-left: 0; 
+        margin-right: auto;
+        margin-top: 0; 
+        margin-bottom: auto;
+        width: 20%;
+        height: 10%;
+        bottom: 0px;
+        z-index: 1;
+        color: #242443;
+        position: fixed;
+        display: flex;
+    }
+
+    .profile-left{
+        margin-left: 0; 
+        margin-right: auto;
+        margin-top: 0;
+        margin-bottom: auto;
+        height: 100%;
+        width: 15%;
+    }
+
+    .profile-title {
+        font-size: 20px;
+        margin-top: 0; 
+        margin-bottom: 1px;
+    }
+
+    .profile-photo {
+        border-radius: 0px;
+        width: 55px;
+        height: 55px;
+        margin-left: 5px;
+        margin-top: 1px; 
+        margin-bottom: auto;
+    }
+
+    .profile-wrapper {
+        height: 95%;
+        width: 80%;
+        margin-left: auto; 
+        margin-right: 0;
+        margin-top: 0;
+        margin-bottom: auto;
+        background-color: #9a7ec8;
+    }
+
+    .profile-name {
+        font-size: 15px;
+        color: #242443;
+        margin-top: 5px; 
+        margin-bottom: auto;
+    }
+
+    .profile-email {
+        color: #242443;
+        font-size: 15px;
+        margin-top: 5px; 
+        margin-bottom: auto;
+    }
+
+    .profile-settings {
+        width: 100%;
+        height: 20px;
+        margin-top: auto; 
+        margin-bottom: 1px;
+        text-align: center;
+    }
 }
 
 @media(max-width: 1350px){
@@ -154,5 +226,24 @@
         margin-left: auto;
         margin-right: auto;
         font-size: 30px;
+    }
+
+    /*profile*/
+    .profile {
+        background-color: #9a71c8;
+        margin-left: 0px;
+        width: 20%;
+        height: 10%;
+        bottom: 0px;
+        z-index: 1;
+        align-items: center;
+        color: #242443;
+        position: fixed;
+    }
+
+    .profile-title {
+        font-size: 20px;
+        margin-left: 0px;
+        margin-top: 0px;
     }
 }

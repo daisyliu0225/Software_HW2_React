@@ -17,15 +17,12 @@ const AddUser = () => {
             fetchSignInMethodsForEmail(auth, newUser).then((signInMethods) => {
               if (signInMethods.length > 0) {
                 // User found, proceed with adding
-                addDoc(collection(db, "roomUsers"), {
-                  text: roomText, 
-                  user: newUser,
+                addDoc(collection(db, "chatRooms"), {
+                  text: roomText,
                   createdAt: serverTimestamp(),
-                  parent: roomID
-                })
-                .catch(error => {
-                  console.log(error);
-                })
+                  creator: newUser,
+                  chatRoomID: roomID,
+                });
 
                 console.log(signInMethods);
                 alert(newUser + " added");

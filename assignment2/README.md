@@ -33,6 +33,7 @@
 -  npm install -g firebase-tools
 -  npm install firebase@latest
 -  npm install react-firebase-hooks
+-  npm install react-bootstrap --save
 
 ### How to use 
 

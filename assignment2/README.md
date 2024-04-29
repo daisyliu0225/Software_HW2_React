@@ -54,7 +54,8 @@
 ### Others (Optional)
 
 - I thought that props was hard but it was easier than I thought and surprisingly convenient.
-- This assignment is harder than I thought.
+- This assignment is harder than I thought. The main reason is that if the components are designed badly, things get messed up.
+- Why are the firebase manuals sooooo messed up? Many of the functions are not so clearly explained or the examples cannot even run. Many examples tried pop error messages concerning that the function does not exist.
 
 ### Versions
 

@@ -2,6 +2,7 @@
 import firebase from "firebase/compat/app"
 import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
+import { collection, query, where, getDocs, addDoc, chatRoomsRef, serverTimestamp } from "firebase/firestore";
 
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -25,5 +26,5 @@ const provider = new GoogleAuthProvider();
 
 export const signInWithGoogle = () => {
   console.log("google btn clicked");
-  signInWithPopup(auth, provider)
+  signInWithPopup(auth, provider);
 };

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import {auth, db} from "../firebaseSettings";
 import { collection, query, where, orderBy, limit, onSnapshot, getDocs } from "firebase/firestore";
+import { addDoc, serverTimestamp } from "firebase/firestore";
 
 const Profile = () => {
     const [user] = useAuthState(auth);
@@ -16,6 +17,30 @@ const Profile = () => {
                 orderBy("createdAt", "desc"),
                 limit(1) // Assuming only one document matches the query
             );
+
+            // Execute the query
+            getDocs(rooms).then((querySnapshot) => {
+            // Check if any documents exist
+            if (querySnapshot.empty) {
+                // User already exists in the chat room
+                const { uid, displayName, photoURL} = auth.currentUser;
+                addDoc(collection(db, "users"), {
+                    text: displayName,
+                    createdAt: serverTimestamp(),
+                    userEmail: user.email,
+                    profilePic: photoURL,
+                })
+                .catch((error) => {
+                    // Handle errors if any
+                    console.error("Error adding document: ", error);
+                    alert("Error adding user: " + error.message);
+                });
+            }
+            }).catch((error) => {
+            // Handle errors if any
+            console.error("Error getting documents: ", error);
+            alert("Error checking user: " + error.message);
+            });
 
             try {
                 const querySnapshot = await getDocs(rooms);

@@ -45,11 +45,11 @@ Panel
 -
 - The project has two panels.
 1. Login
-  The first panel is the login page. The panel enables user to login or signup into the chatroom.
-  ![login-panel](readme/panel/login.png)<br>
+  - The first panel is the login page. The panel enables user to login or signup into the chatroom.
+  - ![login-panel](readme/panel/login.png)<br>
 2. Main page
-  The second panel is the main page. It enables users to do the following functions in the app.
-  ![main-page](readme/panel/main.png)<br>
+  - The second panel is the main page. It enables users to do the following functions in the app.
+  - ![main-page](readme/panel/main.png)<br>
 
 ### Function description
 

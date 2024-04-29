@@ -2,6 +2,9 @@ import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { signOut } from "firebase/auth";
 import { roomID } from "../components/users";
+import { addDoc, collection, serverTimestamp } from "firebase/firestore";
+import { db } from "../firebaseSettings";
+import def from "../pics/avatar/profile.png"
 
 function create_alert(type, message) {
     var str_html;
@@ -24,6 +27,13 @@ export const signUpEmail = () => {
     .then((userCredential) => {
         const user = userCredential.user;
         create_alert("success", " ");
+        const chatRoomsRef = collection(db, "users");
+        addDoc(chatRoomsRef, {
+            text: "user",
+            createdAt: serverTimestamp(),
+            userEmail: email,
+            profilePic: def,
+        })
         email = "";
         password = "";
     })

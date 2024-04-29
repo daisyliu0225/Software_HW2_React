@@ -1,10 +1,38 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import {auth, db} from "../firebaseSettings";
+import { collection, query, where, orderBy, limit, onSnapshot, getDocs } from "firebase/firestore";
 
 const Profile = () => {
     const [user] = useAuthState(auth);
-    const { displayName, photoURL } = auth.currentUser;
+    const [displayName, setDisplayName] = useState("");
+    const [photoURL, setPhotoURL] = useState("");
+    
+    useEffect(() => {
+        const fetchUserData = async () => {
+            const rooms = query(
+                collection(db, "users"),
+                where("userEmail", "==", user.email),
+                orderBy("createdAt", "desc"),
+                limit(1) // Assuming only one document matches the query
+            );
+
+            try {
+                const querySnapshot = await getDocs(rooms);
+                querySnapshot.forEach((doc) => {
+                    // Access individual document data
+                    const userData = doc.data();
+                    setDisplayName(userData.text);
+                    setPhotoURL(userData.profilePic);
+                });
+            } catch (error) {
+                console.error("Error getting documents: ", error);
+            }
+        };
+
+        fetchUserData();
+    }, [user.email]);
+
     return(
         <main className="profile">
             <div className="profile-left">

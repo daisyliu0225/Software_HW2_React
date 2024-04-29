@@ -2,7 +2,7 @@ import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { signOut } from "firebase/auth";
 import { roomID } from "../components/users";
-import { addDoc, collection, serverTimestamp } from "firebase/firestore";
+import { addDoc, collection, serverTimestamp, updateDoc, doc } from "firebase/firestore";
 import { db } from "../firebaseSettings";
 import def from "../pics/avatar/profile.png"
 
@@ -33,6 +33,12 @@ export const signUpEmail = () => {
             createdAt: serverTimestamp(),
             userEmail: email,
             profilePic: def,
+        }).then(docRef => {
+            console.log(docRef.id); 
+            updateDoc(doc(db, "users", docRef.id), {userID: docRef.id});
+        })
+        .catch(error => {
+            console.log(error);
         })
         email = "";
         password = "";

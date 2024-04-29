@@ -4,7 +4,7 @@ import { db } from "../firebaseSettings";
 import {query, collection, collectionGroup, QuerySnapshot, orderBy, limit, onSnapshot, where} from "firebase/firestore";
 import { roomID } from "./users";
 
-const Wrapper = ({clickroom}) => {
+const Wrapper = ({clickroom}, {name}) => {
     const [messages, setMessages] = useState([]);
     const scroll = useRef();
     
@@ -28,7 +28,7 @@ const Wrapper = ({clickroom}) => {
             setMessages(sortedMessages);
         });
         return () => unsubscribe;
-    },[clickroom]);
+    },[clickroom], [name]);
 
     return(
         <main>

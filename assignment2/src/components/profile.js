@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import {auth, db} from "../firebaseSettings";
-import { collection, query, where, orderBy, limit, onSnapshot, getDocs } from "firebase/firestore";
+import { collection, query, where, orderBy, limit, onSnapshot, getDocs, updateDoc, doc } from "firebase/firestore";
 import { addDoc, serverTimestamp } from "firebase/firestore";
 
-const Profile = () => {
+const Profile = ({setName}) => {
     const [user] = useAuthState(auth);
     const [displayName, setDisplayName] = useState("");
     const [photoURL, setPhotoURL] = useState("");
@@ -29,6 +29,9 @@ const Profile = () => {
                     createdAt: serverTimestamp(),
                     userEmail: user.email,
                     profilePic: photoURL,
+                }).then(docRef => {
+                    console.log(docRef.id); 
+                    updateDoc(doc(db, "users", docRef.id), {userID: docRef.id});
                 })
                 .catch((error) => {
                     // Handle errors if any
@@ -58,7 +61,71 @@ const Profile = () => {
         };
 
         fetchUserData();
-    }, [user.email]);
+    }, [user.email], [displayName]);
+
+    const changename = () => {
+        const newName = prompt("Change name.");
+        if (newName === null || newName === "") {
+            alert("cancel change name");
+        } else {
+            const roomsQuery = query(
+                collection(db, "users"),
+                where("userEmail", "==", user.email),
+                orderBy("createdAt", "desc"),
+                limit(1)
+            );
+
+            getDocs(roomsQuery).then((querySnapshot) => {
+                querySnapshot.forEach((docSnap) => {
+                    // Assuming you have a field named "roomId" in your user document
+                    const userid = docSnap.data().userID;
+
+                    // Assuming you want to update the document with the roomId in the "chatRooms" collection
+                    const roomRef = doc(db, "users", userid);
+
+                    updateDoc(roomRef, { text: newName }).then(() => {
+                        setDisplayName(newName);
+                        displayname = newName;
+                        console.log("Document successfully updated!");
+                    }).catch((error) => {
+                        console.error("Error updating document: ", error);
+                        alert("Error updating document: " + error.message);
+                    });
+                });
+            }).catch((error) => {
+                console.error("Error getting documents: ", error);
+                alert("Error checking user: " + error.message);
+            });
+
+            const messagesQuery = query(
+                collection(db, "messages"),
+                where("uid", "==", user.uid),
+                orderBy("createdAt", "desc"),
+                limit(500)
+            );
+
+            getDocs(messagesQuery).then((querySnapshot) => {
+                querySnapshot.forEach((docSnap) => {
+                    // Assuming you have a field named "roomId" in your user document
+                    const messageID = docSnap.data().messageID;
+
+                    // Assuming you want to update the document with the roomId in the "chatRooms" collection
+                    const roomRef = doc(db, "messages", messageID);
+
+                    updateDoc(roomRef, { name: newName }).then(() => {
+                        setName(newName);
+                        console.log("Document successfully updated!");
+                    }).catch((error) => {
+                        console.error("Error updating document: ", error);
+                        alert("Error updating document: " + error.message);
+                    });
+                });
+            }).catch((error) => {
+                console.error("Error getting documents: ", error);
+                alert("Error checking user: " + error.message);
+            });
+        }
+    }
 
     return(
         <main className="profile">
@@ -69,7 +136,7 @@ const Profile = () => {
             <div className="profile-wrapper">
                 <h2 className="profile-name">{displayName}</h2>
                 <h2 className="profile-email">email: {user.email}</h2>
-                <button className="profile-settings">settings</button>
+                <button className="profile-settings" onClick={changename}>change name</button>
             </div>
         </main>
     )

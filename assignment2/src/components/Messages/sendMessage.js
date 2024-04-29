@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import {auth, db} from "../../firebaseSettings";
-import {addDoc, collection, serverTimestamp} from "firebase/firestore";
+import {addDoc, collection, serverTimestamp, updateDoc, doc} from "firebase/firestore";
 import { roomID } from "../users";
 import { useAuthState } from "react-firebase-hooks/auth";
 import NotificationComponent from "../notification.js";
@@ -8,6 +8,7 @@ import { displayname, photourl } from "../profile.js";
 
 const SendMessage = ({ scroll }) => {
     const [message, setMessage] = useState([]);
+    const user = useAuthState(auth);
     console.log(roomID);
     const sendMessage = async (event) => {
         event.preventDefault();
@@ -27,6 +28,12 @@ const SendMessage = ({ scroll }) => {
             createdAt: serverTimestamp(),
             parent: roomID,
             uid,
+        }).then(docRef => {
+            console.log(docRef.id); 
+            updateDoc(doc(db, "messages", docRef.id), {messageID: docRef.id});
+        })
+        .catch(error => {
+            console.log(error);
         });
         setMessage("");
         scroll.current.scrollIntoView({ behavior: "smooth" });

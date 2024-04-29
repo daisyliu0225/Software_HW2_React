@@ -6,18 +6,18 @@ import AddUser from "./addUser";
 import Wrapper from "./wrapper";
 import Profile from "./profile";
 
-
 const ChatBox = () => {
     const scroll = useRef();
     const [room, setRoom] = useState("");
+    const [name, setName] = useState("");
     return (
         <main className="chat-box">
             <NavBar/>
             <AddUser/>
             <ChatRooms clickroom={setRoom}/>
-            <Profile/>
+            <Profile setName={setName}/>
             <div className="messages-wrapper">
-                <Wrapper clickroom={room}/>
+                <Wrapper clickroom={room} name={name}/>
             </div>
             <span ref={scroll}></span>
             <SendMessage scroll={scroll}/>

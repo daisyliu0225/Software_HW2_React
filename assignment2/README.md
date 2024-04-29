@@ -1,6 +1,11 @@
 # Software Studio 2023 Spring Midterm Project
+## Midterm Project Chatroom
 
-### Scoring
+## Announcements
+This is a project of the 2023 Spring Software studio class in National Tsing Hua University.
+The program is written by daisyliu0225.
+
+## Scoring
 
 | **Basic components** | **Score** | **Check** |
 | :------------------- | :-------: | :-------: |
@@ -24,7 +29,7 @@
 
 ---
 
-### How to setup your project
+## How to setup your project
 
 - cd assignment 2
 - npm init
@@ -33,15 +38,18 @@
 - npm install firebase@latest
 - npm install react-firebase-hooks
 
-### How to use
+---
 
-- Panel
-
-- Sign in
-
-- Send messages
-- Create chatrooms
-- Add user
+## How to use
+Panel
+-
+- The project has two panels.
+1. Login
+  The first panel is the login page. The panel enables user to login or signup into the chatroom.
+  ![login-panel](readme/panel/login.png)<br>
+2. Main page
+  The second panel is the main page. It enables users to do the following functions in the app.
+  ![main-page](readme/panel/main.png)<br>
 
 ### Function description
 

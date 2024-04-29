@@ -51,6 +51,19 @@ Panel
   - The second panel is the main page. It enables users to do the following functions in the app.
   - ![main-page](readme/panel/main.png)<br>
 
+---
+Basic Functions
+-
+- The following is what the user may do in the chatApp and how to do it.
+1. Login
+2. Send Messages
+3. Add Chatroom
+4. Add user to Chatroom
+5. Log out
+   - Simply click on the Log Out button located on the right top. The app will then alert bye. The user is loggout successfully.
+   - ![log out button](readme/function/logOut_btn.png)
+   - ![alert](readme/function/logout_alert.png)
+
 ### Function description
 
 - Profile/Change name function

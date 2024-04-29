@@ -2,7 +2,9 @@ import React, { useState } from "react";
 import {auth, db} from "../../firebaseSettings";
 import {addDoc, collection, serverTimestamp} from "firebase/firestore";
 import { roomID } from "../users";
+import { useAuthState } from "react-firebase-hooks/auth";
 import NotificationComponent from "../notification.js";
+import { displayname, photourl } from "../profile.js";
 
 const SendMessage = ({ scroll }) => {
     const [message, setMessage] = useState([]);
@@ -17,11 +19,11 @@ const SendMessage = ({ scroll }) => {
             alert("You cannot send messages here.");
             return;
         }
-        const { uid, displayName, photoURL } = auth.currentUser;
+        const { uid } = auth.currentUser;
         await addDoc(collection(db, "messages"), {
             text: message,
-            name: displayName,
-            avatar: photoURL,
+            name: displayname,
+            avatar: photourl,
             createdAt: serverTimestamp(),
             parent: roomID,
             uid,

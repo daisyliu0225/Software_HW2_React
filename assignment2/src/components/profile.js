@@ -49,6 +49,8 @@ const Profile = () => {
                     const userData = doc.data();
                     setDisplayName(userData.text);
                     setPhotoURL(userData.profilePic);
+                    displayname = userData.text;
+                    photourl = userData.profilePic;
                 });
             } catch (error) {
                 console.error("Error getting documents: ", error);
@@ -74,3 +76,5 @@ const Profile = () => {
 }
 
 export default Profile;
+export var displayname = "";
+export var photourl = "";

@@ -61,8 +61,8 @@ Basic Functions
 4. Add user to Chatroom
 5. Log out
    - Simply click on the Log Out button located on the right top. The app will then alert bye. The user is loggout successfully.
-   - ![log out button](readme/function/logOut_btn.png)
-   - ![alert](readme/function/logout_alert.png)
+   - ![log out button](readme/functions/logOut_btn.png)
+   - ![alert](readme/functions/logout_alert.png)
 
 ### Function description
 

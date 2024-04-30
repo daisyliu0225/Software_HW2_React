@@ -76,7 +76,7 @@ Basic Functions
    - ![before change](readme/panel/main.png)
    - ![change name button](readme/functions/more/change.png)
    - ![change name prompt](readme/functions/more/changeprompt.png)
-   - ![name changed](readme/function/more/changed.png)
+   - ![name changed](readme/functions/more/changed.png)
 
 ### Firebase page link
 

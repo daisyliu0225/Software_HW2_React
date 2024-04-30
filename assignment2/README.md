@@ -49,7 +49,7 @@ Panel
   - ![login-panel](readme/panel/login.png)<br>
 2. Main page
   - The second panel is the main page. It enables users to do the following functions in the app.
-  - ![main-page](readme/panel/main.png)<br>
+  - ![main-page](readme/panel/main.png)<br><br>
 
 
 Basic Functions
@@ -119,7 +119,8 @@ Add user to Chatroom
 - ![duplicate](readme/functions/addUser/duplicate.png)
 - :anger: If the user does not exist in the app(the user has not registered). An alert message will also pop out.
 - ![dne](readme/functions/addUser/dne.png)
-- Both conditions of the user will not be added to the chatroom. <br><br>
+- Both conditions of the user will not be added to the chatroom.
+<br><br>
 
 Log out
 -
@@ -127,7 +128,7 @@ Log out
    - Simply click on the Log Out button located on the right top. The app will then alert bye. The user is logged out successfully.
    - ![log out button](readme/functions/logOut_btn.png)
    - ![alert](readme/functions/logout_alert.png)
-
+<br><br>
 ---
 
 ## Bonus Function description

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import chat from "../pics/avatar/chat.png"
 export var roomID = "";
-export var roomText = " ";
+export var roomText = "";
 
 const Users = ({ roomName, clickroom }) => {
     const changeRoom = (room) => {

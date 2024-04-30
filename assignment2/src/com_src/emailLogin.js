@@ -1,7 +1,7 @@
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { signOut } from "firebase/auth";
-import { roomID } from "../components/users";
+import { roomID, roomText } from "../components/users";
 import { addDoc, collection, serverTimestamp, updateDoc, doc } from "firebase/firestore";
 import { db } from "../firebaseSettings";
 import def from "../pics/avatar/profile.png"
@@ -72,6 +72,7 @@ export const logOut = () => {
     signOut(auth)
     .then(function(){
         roomID = "";
+        roomText = "";
         alert("bye");
     })
 }

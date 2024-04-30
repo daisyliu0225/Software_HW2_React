@@ -82,6 +82,9 @@ Add Chatroom
 - The default of a new account will have no chatrooms. To use the app, the user has to create a chatroom first.
 - Press the add button next to chat.
 - ![addbtn](readme/functions/addChat/addbtn.png)
+- A prompt pops out. Type the chatroom name into prompt.
+- ![add prompt](readme/functions/addchat/addprompt.png)
+- 
 4. Send Messages
 5. Add user to Chatroom
 6. Log out

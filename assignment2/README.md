@@ -67,6 +67,10 @@ Basic Functions
 ### Function description
 
 - Profile/Change name function
+1. Profile
+   - On the left bottom part of the main panel is the profile. The profile shows the profile picture, name and the email of the user.
+   - ![profile](readme/functions/more/profile.png)
+2. Change name function
 
 ### Firebase page link
 

@@ -54,7 +54,7 @@ Panel
 ---
 Basic Functions
 -
-- The following is what the user may do in the chatApp and how to do it.
+- The following are what the user may do in the chatApp and how to do it.
 1. Login
 2. Send Messages
 3. Add Chatroom

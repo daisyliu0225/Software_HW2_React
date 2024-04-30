@@ -102,13 +102,23 @@ Send Messages
 - ![send](readme/functions/sendMessage/send.png)
 - Send finished!
 - ![finished](readme/functions/sendMessage/message.png)
--  :anger: If the user does not click the chatroom before sending, the app will alert the the user cannot send messages here.
+-  :anger: If the user does not click the chatroom before sending, the app will alert that the user cannot send messages here.
 -  ![no](readme/functions/sendMessage/no.png)
 <br><br>
 
 Add user to Chatroom
 -
-
+- To add user into chatroom, first press the add button.
+- ![add btn](readme/functions/addUser/addbtn.png)
+- A prompt will pop out. Type in the :exclamation: user's email :exclamation:.
+- ![type email](readme/functions/addUser/adduserp.png)
+- The user will be added.
+- ![added](readme/functions/addUser/added.png) <br><br>
+- Error conditions
+- :anger: If the user has already been added. An alert message will pop out.
+- ![duplicate](readme/functions/addUser/duplicate.png)
+- :anger: If the user does not exist in the app(the user has not registered). An alert message will also pop out.
+- ![dne](readme/functions/addUser/dne.png)<br><br>
 
 Log out
 -

@@ -79,7 +79,7 @@ Basic Functions
    - ![change name button](readme/functions/more/change.png)
    - Click on the change name, a prompt will pop out.
    - ![change name prompt](readme/functions/more/changeprompt.png)
-   - Type name, and the name will be changed.
+   - Type name, press enter in the prompt, and the name will be changed.
    - ![name changed](readme/functions/more/changed.png)
 
 ### Firebase page link

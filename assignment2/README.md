@@ -90,9 +90,15 @@ Add Chatroom
 - Finished!
 - ![finished](readme/functions/addChat/finished.png)
   <br><br>
-4. Send Messages
+
+Send Messages
+-
+
 5. Add user to Chatroom
-6. Log out
+
+Log out
+-
+
    - Simply click on the Log Out button located on the right top. The app will then alert bye. The user is loggout successfully.
    - ![log out button](readme/functions/logOut_btn.png)
    - ![alert](readme/functions/logout_alert.png)

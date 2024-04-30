@@ -109,15 +109,21 @@ Add Chatroom
    - Type name, press enter in the prompt, and the name will be changed.
    - ![name changed](readme/functions/more/changed.png)
 
+---
+
 ### Firebase page link
 
 - [Your web page `URL`](https://assign2react.web.app)
+
+---
 
 ### Others (Optional)
 
 - I thought that props was hard but it was easier than I thought and surprisingly convenient.
 - This assignment is harder than I thought. The main reason is that if the components are designed badly, things get messed up.
 - Why are the firebase manuals sooooo messed up? Many of the functions are not so clearly explained or the examples cannot even run. Many examples tried pop error messages concerning that the function does not exist.
+
+---
 
 ### Versions
 

@@ -13,6 +13,8 @@ const AddUser = () => {
         const newUser = prompt("Add new user.");
         if(newUser === null || newUser === ""){
             alert("cancel add user");
+        }else if(roomID === ""){
+            alert("You cannot add users here.")
         }else{
           fetchSignInMethodsForEmail(auth, newUser).then((signInMethods) => {
             if (signInMethods.length > 0) {

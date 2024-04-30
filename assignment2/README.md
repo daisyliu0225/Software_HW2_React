@@ -51,7 +51,7 @@ Panel
   - The second panel is the main page. It enables users to do the following functions in the app.
   - ![main-page](readme/panel/main.png)<br>
 
----
+
 Basic Functions
 -
 - The following are what the user may do in the chatApp and how to do it.<br>
@@ -80,7 +80,8 @@ Login/Sign up
 Add Chatroom
 -
 - The default of a new account will have no chatrooms. To use the app, the user has to create a chatroom first.
-- 
+- Press the add button next to chat.
+- ![addbtn](readme/functions/addChat/addbtn.png)
 4. Send Messages
 5. Add user to Chatroom
 6. Log out
@@ -108,15 +109,21 @@ Add Chatroom
    - Type name, press enter in the prompt, and the name will be changed.
    - ![name changed](readme/functions/more/changed.png)
 
+---
+
 ### Firebase page link
 
 - [Your web page `URL`](https://assign2react.web.app)
+
+---
 
 ### Others (Optional)
 
 - I thought that props was hard but it was easier than I thought and surprisingly convenient.
 - This assignment is harder than I thought. The main reason is that if the components are designed badly, things get messed up.
 - Why are the firebase manuals sooooo messed up? Many of the functions are not so clearly explained or the examples cannot even run. Many examples tried pop error messages concerning that the function does not exist.
+
+---
 
 ### Versions
 

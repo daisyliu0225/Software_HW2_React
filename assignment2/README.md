@@ -94,7 +94,9 @@ Add Chatroom
 Send Messages
 -
 
-5. Add user to Chatroom
+Add user to Chatroom
+-
+
 
 Log out
 -

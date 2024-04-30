@@ -51,7 +51,7 @@ Panel
   - The second panel is the main page. It enables users to do the following functions in the app.
   - ![main-page](readme/panel/main.png)<br>
 
----
+
 Basic Functions
 -
 - The following are what the user may do in the chatApp and how to do it.<br>

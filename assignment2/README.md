@@ -64,7 +64,9 @@ Basic Functions
    - ![log out button](readme/functions/logOut_btn.png)
    - ![alert](readme/functions/logout_alert.png)
 
-### Function description
+---
+
+## Bonus Function description
 
 - Profile/Change name function
 1. Profile

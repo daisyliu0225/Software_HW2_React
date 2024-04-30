@@ -54,7 +54,7 @@ Panel
 ---
 Basic Functions
 -
-- The following is what the user may do in the chatApp and how to do it.
+- The following are what the user may do in the chatApp and how to do it.
 1. Login
 2. Send Messages
 3. Add Chatroom
@@ -64,9 +64,25 @@ Basic Functions
    - ![log out button](readme/functions/logOut_btn.png)
    - ![alert](readme/functions/logout_alert.png)
 
-### Function description
+---
+
+## Bonus Function description
 
 - Profile/Change name function
+1. Profile
+   - On the left bottom part of the main panel is the profile. The profile shows the profile picture, name and the email of the user.
+   - ![profile](readme/functions/more/profile.png)
+2. Change name function
+   - At the bottom of the profile, there is a button that can change the current user's name. The way to change name is easy.
+   - Click on the "change name" button, then a prompt will pop out. Type the name user wanted to change the name.
+   - Before changing the name
+   - ![before change](readme/panel/main.png)
+   - The change name button
+   - ![change name button](readme/functions/more/change.png)
+   - Click on the change name, a prompt will pop out.
+   - ![change name prompt](readme/functions/more/changeprompt.png)
+   - Type name, press enter in the prompt, and the name will be changed.
+   - ![name changed](readme/functions/more/changed.png)
 
 ### Firebase page link
 

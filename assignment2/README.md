@@ -73,7 +73,10 @@ Basic Functions
 2. Change name function
    - At the bottom of the profile, there is a button that can change the current user's name. The way to change name is easy.
    - Click on the "change name" button, then a prompt will pop out. Type the name user wanted to change the name.
-   - 
+   - ![before change](readme/panel/main.png)
+   - ![change name button](readme/functions/more/change.png)
+   - ![change name prompt](readme/functions/more/changeprompt.png)
+   - ![name changed](readme/function/more/changed.png)
 
 ### Firebase page link
 

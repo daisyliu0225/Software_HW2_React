@@ -66,10 +66,13 @@ const AddUser = () => {
 
     return (
         <main className="message-nav">
-            <label for="add-btn" className="add-title">Add User</label>
-            <button className="add-btn" onClick={AddUserfunc}>
-                <img src={addUser} className="add-user"></img>
-            </button>
+                <div className="room-name"><p className="roomText">{roomText}</p></div>
+                <div className="add-div">
+                    <label for="add-btn" className="add-title">Add User</label>
+                    <button className="add-btn" onClick={AddUserfunc}>
+                        <img src={addUser} className="add-user"></img>
+                    </button>
+                </div>
         </main>
     )
 }

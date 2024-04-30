@@ -1,16 +1,19 @@
 .message-nav {
     margin-top: 0px;
+    margin-bottom: auto;
     margin-left: 20%;
     margin-right: 0px;
     background-color: #FFFFFF;
     position: fixed;
+    display: flex;
     height: 30px;
     width: 79%;
 }
 
+
 .add-btn {
-    align-items: center;
-    float: right;
+    margin-right: 0px;
+    margin-left: auto;
     background-color: white;
     height: 30px;
     width: 30px;
@@ -18,21 +21,61 @@
 
 
 @media(min-width: 1350px){
+    .room-name {
+        margin-top: 0px;
+        margin-bottom: auto;
+        margin-left: 0px;
+        margin-right: auto;
+        font-size: 20px;
+        width: 90%;
+        height: 100%;
+        text-align: center;
+    }
+
+    .roomText {
+        margin-top: 0px;
+        margin-bottom: auto;
+    }
+
+    .add-div {
+        margin-top: 0px;
+        margin-bottom: auto;
+        margin-left: auto;
+        margin-right: 0px;
+        font-size: 20px;
+        width: 10%;
+        height: 100%;
+    }
+    
     .add-title {
-        padding-left: 89%; 
+        margin-top: 0px;
+        margin-bottom: auto;
         font-size: 20px;
     }
     
     .add-user {
+        margin-top: 0px;
+        margin-bottom: auto;
+        margin-right: 0px;
+        margin-left: auto;
         display: block;
-        margin: auto;
         width: 99%;
     }
 }
 
 @media(max-width: 1350px){
+    .room-name {
+        margin-top: 0px;
+        margin-bottom: auto;
+        margin-left: 0px;
+        margin-right: auto;
+        font-size: 20px;
+    }
+    
     .add-title {
-        display: none;
+        margin-top: 0px;
+        margin-bottom: auto;
+        font-size: 20px;
     }
     
     .add-user {

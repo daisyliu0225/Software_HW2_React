@@ -73,6 +73,7 @@ Basic Functions
    - Use google to sign in/sign up
      - Press the google sign in button.
      - ![google](readme/functions/login/google.png)<br>
+<br><br>
 
 2. Send Messages
 3. Add Chatroom

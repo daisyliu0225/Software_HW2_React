@@ -118,7 +118,8 @@ Add user to Chatroom
 - :anger: If the user has already been added. An alert message will pop out.
 - ![duplicate](readme/functions/addUser/duplicate.png)
 - :anger: If the user does not exist in the app(the user has not registered). An alert message will also pop out.
-- ![dne](readme/functions/addUser/dne.png)<br><br>
+- ![dne](readme/functions/addUser/dne.png)
+- Both conditions of the user will not be added to the chatroom. <br><br>
 
 Log out
 -

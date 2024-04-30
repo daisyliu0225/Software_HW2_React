@@ -94,16 +94,16 @@ Add Chatroom
 Send Messages
 -
 - To sent messages in a chatroom, user has to click on the chatrooms.
-- ![chatrooms](assignment2/readme/functions/sendMessage/chatbtn.png)
+- ![chatrooms](readme/functions/sendMessage/chatbtn.png)
 - If the user clicks on a chatroom, the small navigation bar will show the current chat located.
-- ![click](assignment2/readme/functions/sendMessage/click.png)
+- ![click](readme/functions/sendMessage/click.png)
 - Then type your message onto the message bar and press send.
-- ![message](assignment2/readme/functions/sendMessage/type.png)
-- ![send](assignment2/readme/functions/sendMessage/send.png)
+- ![message](readme/functions/sendMessage/type.png)
+- ![send](readme/functions/sendMessage/send.png)
 - Send finished!
-- ![finished](assignment2/readme/functions/sendMessage/message.png)
+- ![finished](readme/functions/sendMessage/message.png)
 -  :anger: If the user does not click the chatroom before sending, the app will alert the the user cannot send messages here.
--  ![no](assignment2/readme/functions/sendMessage/no.png)
+-  ![no](readme/functions/sendMessage/no.png)
 <br><br>
 
 Add user to Chatroom

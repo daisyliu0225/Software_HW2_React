@@ -83,7 +83,7 @@ Add Chatroom
 - Press the add button next to chat.
 - ![addbtn](readme/functions/addChat/addbtn.png)
 - A prompt pops out. Type the chatroom name into prompt.
-- ![add prompt](readme/functions/addchat/addprompt.png)
+- ![add prompt](readme/functions/addChat/addprompt.png)
 - 
 4. Send Messages
 5. Add user to Chatroom

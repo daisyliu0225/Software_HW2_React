@@ -55,7 +55,25 @@ Panel
 Basic Functions
 -
 - The following are what the user may do in the chatApp and how to do it.
-1. Login
+1. Login/Sign up
+   - Sign up
+     - Type the user email and password into email address and password.
+     - ![signup example](readme/functions/login/signup.png)
+     - Press the sign up button.
+     - ![sign up button](readme/functions/login/newacc.png)
+     - The user will be logged in.
+     - ![logged in](readme/functions/login/signup2.png)<br>
+   - Sign in
+     - Type the user email and password into email address and password.
+     - ![signup example](readme/functions/login/signup.png)
+     - Press the sign in button.
+     - ![sign up button](readme/functions/login/signin.png)
+     - The user will be logged in.
+     - ![logged in](readme/functions/login/signup2.png)<br>
+   - Use google to sign in/sign up
+     - Press the google sign in button.
+     - ![google](readme/functions/login/google.png)<br>
+
 2. Send Messages
 3. Add Chatroom
 4. Add user to Chatroom

@@ -101,7 +101,7 @@ Add user to Chatroom
 Log out
 -
 
-   - Simply click on the Log Out button located on the right top. The app will then alert bye. The user is loggout successfully.
+   - Simply click on the Log Out button located on the right top. The app will then alert bye. The user is logged out successfully.
    - ![log out button](readme/functions/logOut_btn.png)
    - ![alert](readme/functions/logout_alert.png)
 

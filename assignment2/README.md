@@ -181,5 +181,6 @@ Log out
 | 10      | 2024/04/28 | notification                               |
 | 11      | 2024/04/29 | Profile                                    |
 | 12      | 2024/04/29 | Change profile name                        |
+| 13      | 2024/04/30 | Bug fix                                    |
 
 <p align="right">--daisyliu0225</p>

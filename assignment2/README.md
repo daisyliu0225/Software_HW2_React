@@ -54,7 +54,7 @@ Panel
 
 Basic Functions
 -
-- The following are what the user may do in the chatApp and how to do it.<br>
+- The following are what the user may do in the chatApp and how to do it.<br><br>
 
 Login/Sign up
 - 

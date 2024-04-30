@@ -58,21 +58,21 @@ Basic Functions
 
 Login/Sign up
 - 
-- Sign up
+### Sign up
  - Type the user email and password into email address and password.
  - ![signup example](readme/functions/login/signup.png)
  - Press the sign up button.
  - ![sign up button](readme/functions/login/newacc.png)
  - The user will be logged in.
  - ![logged in](readme/functions/login/signup2.png)<br>
-- Sign in
+### Sign in
  - Type the user email and password into email address and password.
  - ![signup example](readme/functions/login/signup.png)
  - Press the sign in button.
  - ![sign up button](readme/functions/login/signin.png)
  - The user will be logged in.
  - ![logged in](readme/functions/login/signup2.png)<br>
-- Use google to sign in/sign up
+### Use google to sign in/sign up
  - Press the google sign in button.
  - ![google](readme/functions/login/google.png)<br>
 <br><br>

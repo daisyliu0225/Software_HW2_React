@@ -80,15 +80,28 @@ Login/Sign up
 Add Chatroom
 -
 - The default of a new account will have no chatrooms. To use the app, the user has to create a chatroom first.
+- ![logged in](readme/functions/login/signup2.png)<br>
 - Press the add button next to chat.
 - ![addbtn](readme/functions/addChat/addbtn.png)
 - A prompt pops out. Type the chatroom name into prompt.
 - ![add prompt](readme/functions/addChat/addprompt.png)
-- 
-4. Send Messages
-5. Add user to Chatroom
-6. Log out
-   - Simply click on the Log Out button located on the right top. The app will then alert bye. The user is loggout successfully.
+- The app will alert that the chatroom is created.
+- ![add alert](readme/functions/addChat/addalert.png)
+- Finished!
+- ![finished](readme/functions/addChat/finished.png)
+  <br><br>
+
+Send Messages
+-
+
+Add user to Chatroom
+-
+
+
+Log out
+-
+
+   - Simply click on the Log Out button located on the right top. The app will then alert bye. The user is logged out successfully.
    - ![log out button](readme/functions/logOut_btn.png)
    - ![alert](readme/functions/logout_alert.png)
 

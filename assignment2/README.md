@@ -31,7 +31,7 @@ The program is written by daisyliu0225.
 
 ## How to setup your project
 
-- cd assignment 2
+- cd Midterm_Project_111060026
 - npm init
 - npm install
 - npm install -g firebase-tools

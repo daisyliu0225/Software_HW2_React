@@ -1,7 +1,9 @@
 # Software Studio 2023 Spring Midterm Project
+
 ## Midterm Project Chatroom
 
 ## Announcements
+
 This is a project of the 2023 Spring Software studio class in National Tsing Hua University.
 The program is written by daisyliu0225.
 
@@ -31,7 +33,7 @@ The program is written by daisyliu0225.
 
 ## How to setup your project
 
-- cd assignment 2
+- cd Midterm_Project_111060026
 - npm init
 - npm install
 - npm install -g firebase-tools
@@ -41,44 +43,55 @@ The program is written by daisyliu0225.
 ---
 
 ## How to use
-Panel
--
+
+## Panel
+
 - The project has two panels.
+
 1. Login
-  - The first panel is the login page. The panel enables user to login or signup into the chatroom.
-  - ![login-panel](readme/panel/login.png)<br>
+
+- The first panel is the login page. The panel enables user to login or signup into the chatroom.
+- ![login-panel](readme/panel/login.png)<br>
+
 2. Main page
-  - The second panel is the main page. It enables users to do the following functions in the app.
-  - ![main-page](readme/panel/main.png)<br><br>
 
+- The second panel is the main page. It enables users to do the following functions in the app.
+- ![main-page](readme/panel/main.png)<br><br>
 
-Basic Functions
--
+## Basic Functions
+
 - The following are what the user may do in the chatApp and how to do it.<br>
 
 Login/Sign up
-- 
-### Sign up
- - Type the user email and password into email address and password.
- - ![signup example](readme/functions/login/signup.png)
- - Press the sign up button.
- - ![sign up button](readme/functions/login/newacc.png)
- - The user will be logged in.
- - ![logged in](readme/functions/login/signup2.png)<br>
-### Sign in
- - Type the user email and password into email address and password.
- - ![signup example](readme/functions/login/signup.png)
- - Press the sign in button.
- - ![sign up button](readme/functions/login/signin.png)
- - The user will be logged in.
- - ![logged in](readme/functions/login/signup2.png)<br>
-### Use google to sign in/sign up
- - Press the google sign in button.
- - ![google](readme/functions/login/google.png)<br>
-<br><br>
 
-Add Chatroom
 -
+
+### Sign up
+
+- Type the user email and password into email address and password.
+- ![signup example](readme/functions/login/signup.png)
+- Press the sign up button.
+- ![sign up button](readme/functions/login/newacc.png)
+- The user will be logged in.
+- ![logged in](readme/functions/login/signup2.png)<br>
+
+### Sign in
+
+- Type the user email and password into email address and password.
+- ![signup example](readme/functions/login/signup.png)
+- Press the sign in button.
+- ![sign up button](readme/functions/login/signin.png)
+- The user will be logged in.
+- ![logged in](readme/functions/login/signup2.png)<br>
+
+### Use google to sign in/sign up
+
+- Press the google sign in button.
+- ![google](readme/functions/login/google.png)<br>
+  <br><br>
+
+## Add Chatroom
+
 - The default of a new account will have no chatrooms. To use the app, the user has to create a chatroom first.
 - ![logged in](readme/functions/login/signup2.png)<br>
 - Press the add button next to chat.
@@ -91,8 +104,8 @@ Add Chatroom
 - ![finished](readme/functions/addChat/finished.png)
   <br><br>
 
-Send Messages
--
+## Send Messages
+
 - To sent messages in a chatroom, user has to click on the chatrooms.
 - ![chatrooms](readme/functions/sendMessage/chatbtn.png)
 - If the user clicks on a chatroom, the small navigation bar will show the current chat located.
@@ -102,12 +115,12 @@ Send Messages
 - ![send](readme/functions/sendMessage/send.png)
 - Send finished!
 - ![finished](readme/functions/sendMessage/message.png)
--  :anger: If the user does not click the chatroom before sending, the app will alert that the user cannot send messages here.
--  ![no](readme/functions/sendMessage/no.png)
-<br><br>
+- :anger: If the user does not click the chatroom before sending, the app will alert that the user cannot send messages here.
+- ![no](readme/functions/sendMessage/no.png)
+  <br><br>
 
-Add user to Chatroom
--
+## Add user to Chatroom
+
 - To add user into chatroom, first press the add button.
 - ![add btn](readme/functions/addUser/addbtn.png)
 - A prompt will pop out. Type in the :exclamation: user's email :exclamation:.
@@ -120,20 +133,21 @@ Add user to Chatroom
 - :anger: If the user does not exist in the app(the user has not registered). An alert message will also pop out.
 - ![dne](readme/functions/addUser/dne.png)
 - Both conditions of the user will not be added to the chatroom.
-<br><br>
+  <br><br>
 
-Log out
--
+## Log out
 
-   - Simply click on the Log Out button located on the right top. The app will then alert bye. The user is logged out successfully.
-   - ![log out button](readme/functions/logOut_btn.png)
-   - ![alert](readme/functions/logout_alert.png)
-<br><br>
+- Simply click on the Log Out button located on the right top. The app will then alert bye. The user is logged out successfully.
+- ![log out button](readme/functions/logOut_btn.png)
+- ![alert](readme/functions/logout_alert.png)
+  <br><br>
+
 ---
 
 ## Bonus Function description
 
 - Profile/Change name function
+
 1. Profile
    - On the left bottom part of the main panel is the profile. The profile shows the profile picture, name and the email of the user.
    - ![profile](readme/functions/more/profile.png)
